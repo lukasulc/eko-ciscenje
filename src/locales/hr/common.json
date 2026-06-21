@@ -1,0 +1,59 @@
+{
+	"home": "Početna",
+	"about": "O nama",
+	"projects": "Jelovnik",
+	"project-1": "Grill ponuda",
+	"project-2": "Dnevna ponuda",
+	"blog": "Novosti",
+	"contact": "Kontakt",
+	"theme-label": "Odaberite temu",
+	"language-label": "Odaberite jezik",
+	"languageSelect": {
+		"hr": "Hrvatski",
+		"en": "Engleski",
+		"instructions": "Koristite strelice za navigaciju i Enter za odabir"
+	},
+	"themeSelect": {
+		"accessibleLabel": "Odaberite temu",
+		"light": "Svijetla",
+		"dark": "Tamna",
+		"auto": "Automatski"
+	},
+	"quote": "Naruči",
+	"estimate": "Kontaktirajte nas",
+	"ctaComponent": {
+		"title": "Gladni ste?",
+		"subtitle": "Svratite ili naručite",
+		"message": "Dvije Žarulje nalazi se u Središću, blizu jezera Bundek, parka Bundek, škole, vrtića i dječjeg igrališta. Svratite na grill, dnevno jelo ili narudžbu za van.",
+		"cta": "Kontakt i lokacija",
+		"alt": "Grill i domaća jela"
+	},
+	"about-page": {
+		"landing": "O nama",
+		"topper": "Dvije Žarulje",
+		"title": "Zagrebački grill i bistro za svaki dan",
+		"p-1": "Dvije Žarulje nalazi se u Ulici Brune Bušića 28 u Zagrebu, u Središću i blizu jezera Bundek. Ponuda je usmjerena na jela koja ljudi traže za konkretan ručak: roštilj, dnevna jela, pohana jela, salate i priloge.",
+		"p-2": "Na jelovniku se nalaze poznati favoriti poput ćevapa, gurmanske pljeskavice, pilećeg grilla, bečkog i zagrebačkog odreska te dnevnih kuhanih jela.",
+		"p-3": "Lokacija je praktična za susjede iz Novog Zagreba, obitelji nakon posjeta Bundeku, roditelje nakon škole ili vrtića i sve koji žele brz, topao obrok u blizini dječjeg igrališta.",
+		"rank": "Restoran | Bistro | Grill",
+		"cta": "Jelovnik"
+	},
+	"footer": {
+		"information": "Informacije",
+		"services": "Ponuda",
+		"contact": "Kontakt",
+		"click": "Pošalji email",
+		"p": "Dvije Žarulje poslužuje grill, dnevna jela, pohane klasike, salate i priloge u Središću, blizu Bundeka u Zagrebu.",
+		"credit": "Stranica za "
+	},
+	"notFound": {
+		"pageNotFound": "404 - Stranica koju tražite ne postoji.",
+		"linkText": "Povratak na početnu"
+	},
+	"skipLink": "Preskoči na glavni sadržaj",
+	"pagination": {
+		"previous": "Prethodno",
+		"next": "Sljedeće"
+	},
+	"reviews": "Recenzije"
+}

@@ -1,0 +1,3 @@
+# Cloudflare Pages serves generated static files first and falls back to
+# /404.html for missing paths. Do not add a language catch-all here:
+# /:lang/* also matches real localized routes such as /en/about/.

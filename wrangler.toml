@@ -1,0 +1,22 @@
+name = "dvije-zarulje"
+compatibility_date = "2026-04-29"
+main = "worker/index.js"
+
+[[routes]]
+pattern = "dvije-zarulje.hr"
+custom_domain = true
+
+[[routes]]
+pattern = "dvije-zarulje.lukasulc.com"
+custom_domain = true
+
+[assets]
+directory = "dist"
+binding = "ASSETS"
+
+[vars]
+CONTACT_TO_EMAIL = "contact@dvije-zarulje.hr"
+CONTACT_FROM_EMAIL = "no-reply@dvije-zarulje.hr"
+
+[[send_email]]
+name = "EMAIL"
