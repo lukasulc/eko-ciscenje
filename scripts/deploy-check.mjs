@@ -89,7 +89,7 @@ const MenuSchema = z.array(
 const DEFAULT_GID = "0";
 const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const hashFilePath = resolve(rootDir, "last-build-hash.txt");
-const fallbackMenuPath = resolve(rootDir, "src/data/menu.json");
+const fallbackMenuPath = resolve(rootDir, "src/data/offerings.json");
 
 function loadDotEnv() {
   const envPath = resolve(rootDir, ".env");
@@ -266,7 +266,7 @@ async function fetchMenuDataForHash() {
 
   if (!spreadsheetId) {
     console.log(
-      "No spreadsheet ID provided. Using src/data/menu.json for the hash.",
+      "No spreadsheet ID provided. Using src/data/offerings.json for the hash.",
     );
     return getFallbackMenuData();
   }
@@ -276,7 +276,7 @@ async function fetchMenuDataForHash() {
 
     if (!response.ok) {
       console.warn(
-        `Google Sheet CSV fetch failed (${response.status} ${response.statusText}). Using src/data/menu.json for the hash.`,
+        `Google Sheet CSV fetch failed (${response.status} ${response.statusText}). Using src/data/offerings.json for the hash.`,
       );
       return getFallbackMenuData();
     }
@@ -287,7 +287,7 @@ async function fetchMenuDataForHash() {
 
     if (!validation.success) {
       console.warn(
-        `Google Sheet menu validation failed with ${validation.error.issues.length} issue(s). Using src/data/menu.json for the hash.`,
+        `Google Sheet menu validation failed with ${validation.error.issues.length} issue(s). Using src/data/offerings.json for the hash.`,
       );
       return getFallbackMenuData();
     }
@@ -295,7 +295,7 @@ async function fetchMenuDataForHash() {
     return validation.data;
   } catch (error) {
     console.warn(
-      `Google Sheet menu fetch failed. Using src/data/menu.json for the hash. ${error instanceof Error ? error.message : String(error)}`,
+      `Google Sheet menu fetch failed. Using src/data/offerings.json for the hash. ${error instanceof Error ? error.message : String(error)}`,
     );
     return getFallbackMenuData();
   }
