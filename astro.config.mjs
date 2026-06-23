@@ -25,6 +25,9 @@ export default defineConfig({
       },
     }),
   ],
+  image: {
+    dangerouslyProcessSVG: true,
+  },
   fonts: [
     {
       provider: fontProviders.fontsource(),
