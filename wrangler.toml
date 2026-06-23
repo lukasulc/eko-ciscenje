@@ -1,13 +1,13 @@
-name = "dvije-zarulje"
+name = "eko-ciscenje"
 compatibility_date = "2026-04-29"
 main = "worker/index.js"
 
 [[routes]]
-pattern = "eko-ciscenje.com"
+pattern = "eko-ciscenje.lukasulc.com"
 custom_domain = true
 
 [[routes]]
-pattern = "dvije-zarulje.lukasulc.com"
+pattern = "eko-ciscenje.lukasulc.com"
 custom_domain = true
 
 [assets]

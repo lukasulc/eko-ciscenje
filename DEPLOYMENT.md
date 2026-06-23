@@ -21,7 +21,7 @@ Pages Functions.
 
 The source of truth is `wrangler.toml`.
 
-- Worker name: `dvije-zarulje`
+- Worker name: `eko-ciscenje`
 - Build command: `npm run build`
 - Deploy command: `npx wrangler deploy`
 - Static assets directory: `dist`

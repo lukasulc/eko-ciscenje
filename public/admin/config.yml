@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: lukasulc/dvije-zarulje-i18n
+  repo: lukasulc/eko-ciscenje
   branch: main
 
 site_url: https://eko-ciscenje.com
