@@ -71,6 +71,10 @@ const offeringsPageCategories: Record<OfferingsPage, OfferingCategory[]> = {
   residential: ["Included", "Optional"],
 };
 
+function isOfferingsPage(value: unknown): value is OfferingsPage {
+  return value === "commercial" || value === "residential";
+}
+
 function getEnv(name: string): string | undefined {
   return import.meta.env[name] ?? process.env[name];
 }
@@ -252,10 +256,28 @@ export function getFallbackOfferingsData(): AstroOfferingsData {
     currency: fallbackOfferingsData.currency,
     updatedAt: fallbackOfferingsData.updatedAt,
     categories: fallbackOfferingsData.categories,
-    items: fallbackOfferingsData.items.map((item) => ({
-      ...item,
-      price: item.price,
-    })),
+    items: fallbackOfferingsData.items.map((item) => {
+      const fallbackSource = item as Partial<AstroOfferingItem>;
+      const fallbackItem: AstroOfferingItem = {
+        id: fallbackSource.id ?? "",
+        categoryId: fallbackSource.categoryId ?? "",
+        name: fallbackSource.name ?? { hr: "", en: "" },
+        description: fallbackSource.description ?? { hr: "", en: "" },
+        badges: fallbackSource.badges ?? { hr: [], en: [] },
+        available: fallbackSource.available ?? true,
+        ...(isOfferingsPage(fallbackSource.page)
+          ? { page: fallbackSource.page }
+          : {}),
+        ...(typeof fallbackSource.price === "string"
+          ? { price: fallbackSource.price }
+          : {}),
+        ...(typeof fallbackSource.featured === "boolean"
+          ? { featured: fallbackSource.featured }
+          : {}),
+      };
+
+      return fallbackItem;
+    }),
   };
 }
 
@@ -271,9 +293,10 @@ export async function getValidatedSheetOfferings(): Promise<
   const response = await fetch(getPublicCsvUrl(spreadsheetId));
 
   if (!response.ok) {
-    throw new Error(
+    console.warn(
       `Google Sheet CSV fetch failed: ${response.status} ${response.statusText}`,
     );
+    return undefined;
   }
 
   const validation = OfferingsSchema.safeParse(
@@ -281,14 +304,11 @@ export async function getValidatedSheetOfferings(): Promise<
   );
 
   if (!validation.success) {
-    // log issues so a developer can fix the sheet.
     console.warn(
       `Google Sheet offerings validation failed with ${validation.error.issues.length} issue(s):`,
       validation.error.issues,
     );
-    throw new Error(
-      `Google Sheet offerings validation failed with ${validation.error.issues.length} issue(s).`,
-    );
+    return undefined;
   }
 
   return validation.data;
@@ -324,22 +344,26 @@ async function loadAstroOfferingsData(): Promise<AstroOfferingsData> {
       id,
       ...categoryDetails[id],
     })),
-    items: items.map((item, index) => ({
-      id: `${slugify(item.name) || "offering-item"}-${index + 1}`,
-      categoryId: item.category,
-      page: item.page,
-      name: { hr: item.name, en: item.name },
-      description: {
-        hr: item.opis ?? "",
-        en: item.description ?? "",
-      },
-      price: item.price,
-      badges: {
-        hr: parseBadges(item.znacke),
-        en: parseBadges(item.badges),
-      },
-      available: true,
-    })),
+    items: items.map((item, index) => {
+      const sheetItem: AstroOfferingItem = {
+        id: `${slugify(item.name) || "offering-item"}-${index + 1}`,
+        categoryId: item.category,
+        name: { hr: item.name, en: item.name },
+        description: {
+          hr: item.opis ?? "",
+          en: item.description ?? "",
+        },
+        badges: {
+          hr: parseBadges(item.znacke),
+          en: parseBadges(item.badges),
+        },
+        available: true,
+        ...(isOfferingsPage(item.page) ? { page: item.page } : {}),
+        ...(typeof item.price === "string" ? { price: item.price } : {}),
+      };
+
+      return sheetItem;
+    }),
   };
 }
 
