@@ -3,8 +3,8 @@ backend:
   repo: lukasulc/dvije-zarulje-i18n
   branch: main
 
-site_url: https://dvije-zarulje.hr
-display_url: https://dvije-zarulje.hr
+site_url: https://eko-ciscenje.com
+display_url: https://eko-ciscenje.com
 
 media_folder: src/assets/images/uploads
 public_folder: "@assets/images/uploads"
@@ -18,9 +18,9 @@ collections:
   - name: "site-data"
     label: "Site data"
     files:
-      - name: "menu"
-        label: "Restaurant menu"
-        file: "src/data/menu.json"
+      - name: "offerings"
+        label: "Offerings"
+        file: "src/data/offerings.json"
         fields:
           - {
               label: "Currency",

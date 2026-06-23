@@ -33,7 +33,7 @@ The Worker needs these environment variables:
 - `GOOGLE_SHEETS_GID` if the sheet tab is not gid `0`
 - `CONTACT_TO_EMAIL` - the verified inbox that receives contact messages.
 - `CONTACT_FROM_EMAIL` - the sender on your Email Routing domain, for example
-  `kontakt@dvije-zarulje.hr`.
+  `kontakt@eko-ciscenje.com`.
 
 ## Contact Form Email
 

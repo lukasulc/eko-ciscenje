@@ -1,63 +1,54 @@
 [
-	{
-		"key": "home",
-		"url": "/",
-		"label": {
-			"hr": "Početna",
-			"en": "Home"
-		},
-		"children": []
-	},
-	{
-		"key": "about",
-		"url": "/about",
-		"label": {
-			"hr": "O nama",
-			"en": "About"
-		},
-		"children": []
-	},
-	{
-		"key": "projects",
-		"label": {
-			"hr": "Jelovnik",
-			"en": "Menu"
-		},
-		"children": [
-			{
-				"key": "project-1",
-				"url": "/projects/project-1/",
-				"label": {
-					"hr": "Grill ponuda",
-					"en": "Grill menu"
-				}
-			},
-			{
-				"key": "project-2",
-				"url": "/projects/project-2/",
-				"label": {
-					"hr": "Dnevna ponuda",
-					"en": "Daily menu"
-				}
-			}
-		]
-	},
-	{
-		"key": "reviews",
-		"url": "/reviews",
-		"label": {
-			"hr": "Recenzije",
-			"en": "Reviews"
-		},
-		"children": []
-	},
-	{
-		"key": "contact",
-		"url": "/contact",
-		"label": {
-			"hr": "Kontakt",
-			"en": "Contact"
-		},
-		"children": []
-	}
+  {
+    "key": "home",
+    "url": "/",
+    "label": {
+      "hr": "Početna",
+      "en": "Home"
+    },
+    "children": []
+  },
+  {
+    "key": "about",
+    "url": "/about",
+    "label": {
+      "hr": "O nama",
+      "en": "About"
+    },
+    "children": []
+  },
+  {
+    "key": "projects",
+    "label": {
+      "hr": "Usluge",
+      "en": "Services"
+    },
+    "children": [
+      {
+        "key": "project-1",
+        "url": "/projects/project-1/",
+        "label": {
+          "hr": "Čišćenje stanova",
+          "en": "Residential cleaning"
+        }
+      },
+      {
+        "key": "project-2",
+        "url": "/projects/project-2/",
+        "label": {
+          "hr": "Čišćenje ureda",
+          "en": "Commercial cleaning"
+        }
+      }
+    ]
+  },
+  {
+    "key": "contact",
+    "url": "/contact",
+    "label": {
+      "hr": "Kontakt",
+      "en": "Contact"
+    },
+    "children": []
+  }
 ]

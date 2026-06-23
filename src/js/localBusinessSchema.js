@@ -5,7 +5,7 @@ export function getLocalBusinessSchema(origin) {
   if (BUSINESS.socials?.facebook) sameAs.push(BUSINESS.socials.facebook);
   if (BUSINESS.socials?.instagram) sameAs.push(BUSINESS.socials.instagram);
 
-  const businessId = `${SITE.url}/#restaurant`;
+  const businessId = `${SITE.url}/#business`;
   const websiteId = `${SITE.url}/#website`;
 
   const schema = {
@@ -23,15 +23,10 @@ export function getLocalBusinessSchema(origin) {
         },
       },
       {
-        "@type": ["Restaurant", "LocalBusiness"],
+        "@type": ["LocalBusiness", "ProfessionalService"],
         "@id": businessId,
         name: BUSINESS.name,
-        alternateName: [
-          "Dvije Zarulje",
-          "2 Zarulje",
-          "Dvije Žarulje",
-          "2 Žarulje",
-        ],
+        alternateName: ["Eko Ciscenje", "Eko Čišćenje"],
         description: SITE.description,
         url: SITE.url,
         logo: origin + BUSINESS.logo,
@@ -53,9 +48,13 @@ export function getLocalBusinessSchema(origin) {
           longitude: 15.9879,
         },
         hasMap: BUSINESS.address.mapLink,
-        servesCuisine: ["Croatian", "Grill", "Bistro", "Homestyle food"],
+        serviceType: [
+          "Steam cleaning",
+          "Eco cleaning",
+          "Carpet cleaning",
+          "Upholstery cleaning",
+        ],
         priceRange: "EUR",
-        menu: `${SITE.url}/jelovnik/grill-ponuda/`,
         areaServed: [
           {
             "@type": "City",
@@ -76,16 +75,16 @@ export function getLocalBusinessSchema(origin) {
           },
         ],
         knowsAbout: [
-          "grill food in Zagreb",
-          "cevapi",
-          "pljeskavica",
-          "daily cooked meals",
-          "takeaway food near Bundek",
-          "lunch near Bundek Lake",
-          "family lunch near Bundek Park",
+          "steam cleaning in Zagreb",
+          "eco-friendly cleaning",
+          "carpet cleaning",
+          "upholstery cleaning",
+          "home cleaning service",
+          "office cleaning service",
+          "deep cleaning without chemicals",
         ],
         keywords:
-          "Dvije Zarulje, Dvije Žarulje, grill Zagreb, rostilj Zagreb, cevapi Zagreb, daily menu Zagreb, dnevna jela Zagreb, Bundek, Sredisce, Ulica Brune Bušića 28, Ulica Brune Busica 28",
+          "Eko Čišćenje, Eko Ciscenje, čišćenje parom Zagreb, parno čišćenje Zagreb, tepih čišćenje Zagreb, uredsko čišćenje Zagreb, ekološko čišćenje",
         sameAs,
         inLanguage: SITE.locale,
       },
@@ -95,7 +94,7 @@ export function getLocalBusinessSchema(origin) {
         name: "Bundek Lake and Park",
         alternateName: "Jezero i park Bundek",
         description:
-          "Bundek is a Novi Zagreb lake and park area near Dvije Žarulje, with walking paths, green areas and children's playgrounds.",
+          "Bundek is a Novi Zagreb lake and park area near Eko Čišćenje, with walking paths, green areas and children's playgrounds.",
         containedInPlace: {
           "@type": "City",
           name: "Zagreb",

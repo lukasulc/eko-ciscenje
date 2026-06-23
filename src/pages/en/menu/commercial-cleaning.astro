@@ -1,0 +1,27 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import CTA from "@components/CTA/CTA.astro";
+import Banner from "@components/Banner/Banner.astro";
+import CatalogSection from "@components/Catalog/CatalogSection.astro";
+import { getLocaleFromUrl } from "@js/localeUtils";
+import { useTranslations } from "@js/translationUtils";
+import landingImage from "@assets/images/eko-ciscenje/Beautifully-designed-visual-EV-Atlantis.jpg";
+import { getOfferingsData, getOfferingsPageCategoryIds } from "../../../googleSheets";
+
+const locale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(locale);
+const offeringsData = await getOfferingsData();
+const categoryIds = getOfferingsPageCategoryIds(offeringsData, "commercial");
+---
+
+<BaseLayout title={t("project-1")} description={t("home:extra.p1")}>
+	<Banner title={t("project-1")} image={landingImage} />
+	<CatalogSection
+		locale={locale}
+		page="commercial"
+		categoryIds={categoryIds}
+		offeringsData={offeringsData}
+		intro={t("home:extra.p1")}
+	/>
+	<CTA />
+</BaseLayout>

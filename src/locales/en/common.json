@@ -1,9 +1,9 @@
 {
   "home": "Home",
   "about": "About",
-  "projects": "Menu",
-  "project-1": "Grill Menu",
-  "project-2": "Daily Menu",
+  "projects": "Services",
+  "project-1": "Residential cleaning",
+  "project-2": "Commercial cleaning",
   "blog": "News",
   "contact": "Contact",
   "theme-label": "Choose theme",
@@ -22,28 +22,28 @@
   "quote": "Order",
   "estimate": "Contact us",
   "ctaComponent": {
-    "title": "Hungry?",
-    "subtitle": "Visit or order",
-    "message": "Dvije Žarulje is in Središće, close to Bundek Lake, Bundek Park, a school, kindergarten and children's playgrounds. Visit for grill, a daily dish or takeaway.",
+    "title": "Need cleaning?",
+    "subtitle": "Call or book",
+    "message": "Eko Čišćenje operates in Zagreb, offering steam cleaning for carpets, upholstery and homes with eco-friendly solutions.",
     "cta": "Contact and location",
-    "alt": "Grill and homestyle food"
+    "alt": "Steam cleaning and eco cleaning"
   },
   "about-page": {
     "landing": "About",
-    "topper": "Dvije Žarulje",
-    "title": "A Zagreb grill and bistro for everyday meals",
-    "p-1": "Dvije Žarulje is located at Ulica Brune Bušića 28 in Zagreb, in Središće and close to Bundek Lake. The offer focuses on food people look for when they want a proper lunch: grill, daily dishes, fried classics, salads and sides.",
-    "p-2": "The menu includes familiar favorites such as cevapi, gourmet burgers, chicken grill, Wiener and Zagreb-style schnitzel, and daily cooked dishes.",
-    "p-3": "The location is practical for Novi Zagreb neighbors, families after visiting Bundek, parents after school or kindergarten and anyone looking for a quick warm meal near children's playgrounds.",
-    "rank": "Restaurant | Bistro | Grill",
-    "cta": "Menu"
+    "topper": "Eko Čišćenje",
+    "title": "Professional steam cleaning in Zagreb",
+    "p-1": "Eko Čišćenje offers expert steam cleaning services in Zagreb for homes, offices and upholstered surfaces.",
+    "p-2": "We use steam to deep clean and sanitize without harsh chemicals, leaving your space fresh and healthy.",
+    "p-3": "Our eco-friendly cleaning reduces allergens and bacteria while protecting materials and finishes.",
+    "rank": "Eco Cleaning | Steam Cleaning | Cleaning Services",
+    "cta": "Services"
   },
   "footer": {
     "information": "Information",
-    "services": "Menu",
+    "services": "Services",
     "contact": "Contact",
     "click": "Send email",
-    "p": "Dvije Žarulje serves grill dishes, daily specials, fried classics, salads and sides in Središće, near Bundek in Zagreb.",
+    "p": "Eko Čišćenje provides steam and eco cleaning in Zagreb for homes, offices and upholstered surfaces.",
     "credit": "Website for "
   },
   "notFound": {

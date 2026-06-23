@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.dvije-zarulje.hr/sitemap-index.xml
+Sitemap: https://eko-ciscenje.com/sitemap-index.xml

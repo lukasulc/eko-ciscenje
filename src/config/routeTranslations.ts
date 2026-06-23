@@ -3,17 +3,17 @@ import type { Locale } from "./siteSettings";
 export const routeTranslations: Record<Locale, Record<string, string>> = {
   hr: {
     "about": "o-nama",
-    "projects": "jelovnik",
-    "project-1": "grill-ponuda",
-    "project-2": "dnevna-ponuda",
-    "reviews": "recenzije",
+    "projects": "usluge",
+    "project-1": "ciscenje-stanova",
+    "project-2": "ciscenje-uredskih-prostora",
+    // "reviews": "recenzije",
   },
   en: {
     "about": "about",
-    "projects": "menu",
-    "project-1": "grill-menu",
-    "project-2": "daily-menu",
-    "reviews": "reviews",
+    "projects": "offerings",
+    "project-1": "residential-cleaning",
+    "project-2": "commercial-cleaning",
+    // "reviews": "reviews",
   },
 };
 

@@ -1,8 +1,8 @@
 import { createHash } from "node:crypto";
-import { getAstroPieMenuData } from "../googleSheets";
+import { getOfferingsData } from "../googleSheets";
 
-export async function getCurrentMenuHash(): Promise<string> {
-	const menuItems = await getAstroPieMenuData();
+export async function getCurrentOfferingsHash(): Promise<string> {
+  const offeringsItems = await getOfferingsData();
 
-	return createHash("md5").update(JSON.stringify(menuItems)).digest("hex");
+  return createHash("md5").update(JSON.stringify(offeringsItems)).digest("hex");
 }

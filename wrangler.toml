@@ -3,7 +3,7 @@ compatibility_date = "2026-04-29"
 main = "worker/index.js"
 
 [[routes]]
-pattern = "dvije-zarulje.hr"
+pattern = "eko-ciscenje.com"
 custom_domain = true
 
 [[routes]]
@@ -15,8 +15,8 @@ directory = "dist"
 binding = "ASSETS"
 
 [vars]
-CONTACT_TO_EMAIL = "contact@dvije-zarulje.hr"
-CONTACT_FROM_EMAIL = "no-reply@dvije-zarulje.hr"
+CONTACT_TO_EMAIL = "contact@eko-ciscenje.com"
+CONTACT_FROM_EMAIL = "no-reply@eko-ciscenje.com"
 
 [[send_email]]
 name = "EMAIL"

@@ -1,0 +1,125 @@
+{
+  "currency": "EUR",
+  "updatedAt": "2026-05-02",
+  "categories": [
+    {
+      "id": "Included",
+      "title": {
+        "hr": "Uključeno u cijenu",
+        "en": "Included in the price"
+      },
+      "description": {
+        "hr": "Usluge koje su uključene u osnovnu cijenu čišćenja.",
+        "en": "Services included in the base cleaning price."
+      }
+    },
+    {
+      "id": "Optional",
+      "title": {
+        "hr": "Opcionalno",
+        "en": "Optionals"
+      },
+      "description": {
+        "hr": "Dodatne usluge koje se mogu naručiti uz osnovno čišćenje.",
+        "en": "Additional services that can be ordered with the base cleaning."
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "basic-apartment-clean",
+      "categoryId": "Included",
+      "page": "residential",
+      "name": {
+        "hr": "Osnovno čišćenje stana",
+        "en": "Basic apartment clean"
+      },
+      "description": {
+        "hr": "Kompletno čišćenje stana s naglaskom na dnevne prostorije.",
+        "en": "Complete apartment cleaning focused on daily living spaces."
+      },
+      "price": "70.00",
+      "badges": {
+        "hr": ["Popularno"],
+        "en": ["Popular"]
+      },
+      "available": true
+    },
+    {
+      "id": "office-deep-clean",
+      "categoryId": "Included",
+      "page": "commercial",
+      "name": {
+        "hr": "Dubinsko čišćenje ureda",
+        "en": "Office deep clean"
+      },
+      "description": {
+        "hr": "Dubinsko čišćenje ureda prilagođeno profesionalnim prostorima.",
+        "en": "Deep cleaning for offices designed for professional environments."
+      },
+      "price": "150.00",
+      "badges": {
+        "hr": ["Profesionalno"],
+        "en": ["Professional"]
+      },
+      "available": true
+    },
+    {
+      "id": "garage-cleaning",
+      "categoryId": "Optional",
+      "page": "residential",
+      "name": {
+        "hr": "Čišćenje garaže",
+        "en": "Garage cleaning"
+      },
+      "description": {
+        "hr": "Čišćenje i organizacija garažnog prostora.",
+        "en": "Cleaning and organizing garage space."
+      },
+      "price": "30.00",
+      "badges": {
+        "hr": ["Dodaci"],
+        "en": ["Add-on"]
+      },
+      "available": true
+    },
+    {
+      "id": "car-interior-cleaning",
+      "categoryId": "Optional",
+      "page": "residential",
+      "name": {
+        "hr": "Čišćenje unutrašnjosti automobila",
+        "en": "Car interior cleaning"
+      },
+      "description": {
+        "hr": "Dubinsko čišćenje sjedala, poda i unutarnjih površina vozila.",
+        "en": "Deep cleaning of seats, floor, and interior surfaces of your car."
+      },
+      "price": "40.00",
+      "badges": {
+        "hr": ["Dodaci"],
+        "en": ["Add-on"]
+      },
+      "available": true
+    },
+    {
+      "id": "after-hours-office-cleaning",
+      "categoryId": "Optional",
+      "page": "commercial",
+      "name": {
+        "hr": "Nakon radnog vremena",
+        "en": "After-hours cleaning"
+      },
+      "description": {
+        "hr": "Dubinsko čišćenje ureda izvan radnog vremena.",
+        "en": "Deep cleaning of the office outside business hours."
+      },
+      "price": "55.00",
+      "badges": {
+        "hr": ["Dodaci"],
+        "en": ["Add-on"]
+      },
+      "available": true
+    }
+  ]
+}

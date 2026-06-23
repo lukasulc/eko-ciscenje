@@ -2,14 +2,11 @@
 import { Picture } from "astro:assets";
 import { getLocaleFromUrl } from "@js/localeUtils";
 import { useTranslations } from "@js/translationUtils";
-import burger from "@assets/images/food/burger.jpg";
-import cordonBlueFries from "@assets/images/food/cordon-blue-fries.jpg";
-import friedPaprika from "@assets/images/food/fried-paprika.jpg";
-import meat from "@assets/images/food/meat.jpg";
-import mincedMeatSteak from "@assets/images/food/minced-meet-steak.jpg";
-import plata from "@assets/images/food/plata.jpg";
-import stewAndBeer from "@assets/images/food/stew-and-beer.jpg";
-import twoBurgers from "@assets/images/food/two-burgers.jpg";
+import atlantisSteam from "@assets/images/eko-ciscenje/EV-ATLANTIS-steam-cleaner.jpeg";
+import atlasCleaner from "@assets/images/eko-ciscenje/EV-ATLAS-cleaner.jpeg";
+import poseidonChemical from "@assets/images/eko-ciscenje/EV-POSEIDON-chemical-cleaner.jpeg";
+import threeCleaners from "@assets/images/eko-ciscenje/Three-EV-cleaners-variants.jpeg";
+import visualAtlantis from "@assets/images/eko-ciscenje/Beautifully-designed-visual-EV-Atlantis.jpg";
 
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
@@ -29,23 +26,23 @@ const t = useTranslations(locale);
 			<!-- Row 1-->
 			<div class="cs-row cs-row-1">
 				<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-				<Picture src={burger} alt="burger with fries" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} aria-hidden="true" decoding="async" loading="lazy" />
-				<Picture src={meat} alt="grilled meat" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} aria-hidden="true" decoding="async" loading="lazy" />
-				<Picture src={stewAndBeer} alt="stew and beer" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} aria-hidden="true" decoding="async" loading="lazy" />
+				<Picture src={atlantisSteam} alt="Steam cleaning machine in action" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} aria-hidden="true" decoding="async" loading="lazy" />
+				<Picture src={atlasCleaner} alt="Industrial eco-cleaning equipment" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} aria-hidden="true" decoding="async" loading="lazy" />
+				<Picture src={poseidonChemical} alt="Chemical cleaning unit with eco packaging" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} aria-hidden="true" decoding="async" loading="lazy" />
 			</div>
 			<!-- Row 2 -->
 			<div class="cs-row cs-row-2">
 				<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-				<Picture src={cordonBlueFries} alt="cordon bleu with fries" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} aria-hidden="true" decoding="async" loading="lazy" />
-				<Picture src={mincedMeatSteak} alt="grilled minced meat steak" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} aria-hidden="true" decoding="async" loading="lazy" />
-				<Picture src={twoBurgers} alt="two burgers" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} aria-hidden="true" decoding="async" loading="lazy" />
+				<Picture src={visualAtlantis} alt="Eco cleaning brand visual" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} aria-hidden="true" decoding="async" loading="lazy" />
+				<Picture src={threeCleaners} alt="Three eco cleaning machines" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} aria-hidden="true" decoding="async" loading="lazy" />
+				<Picture src={atlantisSteam} alt="Steam cleaning machine in action" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} aria-hidden="true" decoding="async" loading="lazy" />
 			</div>
 			<!-- Row 3 -->
 			<div class="cs-row cs-row-3">
 				<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-				<Picture src={friedPaprika} alt="fried paprika" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} aria-hidden="true" decoding="async" loading="lazy" />
-				<Picture src={plata} alt="mixed grill platter" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} aria-hidden="true" decoding="async" loading="lazy" />
-				<Picture src={burger} alt="burger with fries" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} aria-hidden="true" decoding="async" loading="lazy" />
+				<Picture src={atlasCleaner} alt="Industrial eco-cleaning equipment" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} aria-hidden="true" decoding="async" loading="lazy" />
+				<Picture src={poseidonChemical} alt="Chemical cleaning unit with eco packaging" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} aria-hidden="true" decoding="async" loading="lazy" />
+				<Picture src={visualAtlantis} alt="Eco cleaning brand visual" width={400} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} aria-hidden="true" decoding="async" loading="lazy" />
 			</div>
 		</div>
 	</div>

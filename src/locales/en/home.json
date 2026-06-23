@@ -1,70 +1,70 @@
 {
   "layout": {
-    "title": "Grill, Daily Menu and Lunch near Bundek in Zagreb",
-    "description": "Dvije Žarulje is a grill and bistro at Ulica Brune Bušića 28 in Središće, close to Bundek Lake, Bundek Park, a school, kindergarten and children's playgrounds."
+    "title": "Professional steam cleaning in Zagreb",
+    "description": "Eko Čišćenje provides eco-friendly steam cleaning in Zagreb for homes, offices, carpets and upholstered furniture without harsh chemicals."
   },
   "hero": {
-    "topper": "Zagreb Središće | Ulica Brune Bušića 28 | Near Bundek",
+    "topper": "Zagreb | Eco Cleaning | Steam Cleaning",
     "title": {
-      "1": "Dvije Žarulje",
-      "2": "grill and homestyle food"
+      "1": "Eko Čišćenje",
+      "2": "professional steam cleaning"
     },
-    "p1": "Grill, cevapi, burgers, chicken grill and daily cooked dishes in Središće, just minutes from Bundek Lake, Bundek Park, a school, kindergarten and children's playgrounds.",
-    "cta1": "View the menu",
+    "p1": "Quick and hygienic steam cleaning for carpets, mattresses and upholstery in Zagreb, using eco-friendly methods without harsh chemicals.",
+    "cta1": "View services",
     "cta2": "Find us"
   },
   "services": [
     {
-      "heading": "Grill Menu",
-      "p": "Cevapi, burgers, chicken breast and mixed platters made for a proper lunch or dinner."
+      "heading": "Steam Cleaning",
+      "p": "Deep steam cleaning for carpets, upholstery, mattresses and soft surfaces."
     },
     {
-      "heading": "Daily Specials",
-      "p": "Cooked dishes such as wine goulash, stews and seasonal homestyle favorites for a lunch break or family meal."
+      "heading": "Eco Home Care",
+      "p": "Gentle eco-friendly cleaning for homes and offices without harsh chemicals."
     },
     {
-      "heading": "Takeaway & Delivery",
-      "p": "Order for pickup or delivery through available platforms such as Wolt and Glovo."
+      "heading": "Sanitization",
+      "p": "Professional sanitization and allergen reduction for a healthier living space."
     }
   ],
   "about": {
     "topper": "About Us",
-    "title": "A grill and bistro in Središće near Bundek",
-    "p1": "Dvije Žarulje is located at Ulica Brune Bušića 28 in Zagreb, in the Središće neighborhood and close to Bundek Lake and Bundek Park.",
-    "p2": "The location is practical for Novi Zagreb residents, parents after school or kindergarten, a walk by Bundek and a quick lunch after the children's playground.",
-    "p3": "Good food does not need to overcomplicate things: quality meat, familiar flavors and portions worth coming back for.",
-    "rank": "Grill, bistro and daily menu",
+    "title": "Steam cleaning services in Zagreb",
+    "p1": "Eko Čišćenje provides steam and eco-cleaning services in Zagreb for homes, offices and upholstered furniture.",
+    "p2": "The location is practical for Zagreb residents and businesses looking for fast, professional cleaning without harsh chemicals.",
+    "p3": "We use steam to refresh and sanitize spaces, reducing allergens and protecting your surfaces.",
+    "rank": "Eco cleaning and steam cleaning",
     "cta": "More about us"
   },
   "extra": {
-    "topper": "Menu",
-    "title": "From the grill to daily cooked dishes",
-    "p1": "The grill menu includes cevapi, sis cevapi, burgers, chicken breast and sharing platters, served with flatbread, onion and classic sides.",
-    "p2": "For guests who want something homestyle, the daily menu brings stews, goulash, fish dishes and fried classics with sides."
+    "topper": "Services",
+    "title": "Clean, fresh and healthy spaces",
+    "p1": "We refresh upholstery, carpets and mattresses using steam cleaning and eco-safe care.",
+    "p2": "Perfect for homeowners and businesses who want a hygienic, fast and reliable cleaning solution."
   },
   "portfolio": {
-    "topper": "Menu Highlights",
-    "title": "Familiar flavors, quick service and generous portions",
-    "cta": "View the menu"
+    "topper": "Service Highlights",
+    "title": "Clean, refreshed spaces with professional steam care",
+    "cta": "View services"
   },
   "testimonials": {
     "topper": "Reviews",
-    "title": "What Guests Often Mention",
+    "title": "What clients often mention",
     "items": [
       {
-        "quote": "A good place for a quick, filling lunch, especially when you want grill without a long wait.",
-        "name": "Restaurant guest",
-        "role": "Dine-in lunch"
+        "quote": "The steam cleaning made our sofa look and smell brand new.",
+        "name": "Anna",
+        "role": "Home cleaning"
       },
       {
-        "quote": "The cevapi and burgers are satisfying, and the side options make ordering simple.",
-        "name": "Regular guest",
-        "role": "Grill menu"
+        "quote": "Professional, fast and friendly service for our office upholstery.",
+        "name": "Mark",
+        "role": "Office cleaning"
       },
       {
-        "quote": "The daily dishes are a practical option when you want something warm and homestyle during the workday.",
-        "name": "Customer",
-        "role": "Daily menu"
+        "quote": "Eco-friendly cleaning without harsh chemicals, excellent results.",
+        "name": "Emily",
+        "role": "Steam cleaning"
       }
     ]
   }

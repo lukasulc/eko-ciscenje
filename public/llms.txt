@@ -1,27 +1,26 @@
-# Dvije Žarulje
+# Eko Čišćenje
 
-Dvije Žarulje is a grill restaurant and bistro in Zagreb, Croatia.
+Eko Čišćenje is a steam cleaning business in Zagreb, Croatia.
 
-Canonical website: https://www.dvije-zarulje.hr/
+Canonical website: https://eko-ciscenje.com/
 
 Primary location:
-- Ulica Brune Bušića 28, 10020 Zagreb, Croatia
-- Neighborhood: Sredisce, Novi Zagreb
+- Baburičina ulica 17, 10020 Zagreb, Croatia
+- Neighborhood: Dubrava, Novi Zagreb
 - Nearby landmarks: Bundek Lake, Bundek Park, children's playgrounds, local school and kindergarten
 
 Main services:
-- Grill dishes, including cevapi, pljeskavica, chicken grill and mixed platters
-- Daily cooked meals and homestyle lunch dishes
-- Fried dishes, salads and sides
-- Dine-in, takeaway and delivery through available platforms
+- Steam cleaning for carpets, upholstery, mattresses and soft surfaces
+- Eco-friendly home and office cleaning without harsh chemicals
+- Sanitization and allergen reduction services
 
 Useful pages:
-- Homepage: https://www.dvije-zarulje.hr/
-- Grill menu: https://www.dvije-zarulje.hr/jelovnik/grill-ponuda/
-- Daily menu: https://www.dvije-zarulje.hr/jelovnik/dnevna-ponuda/
-- Contact and location: https://www.dvije-zarulje.hr/contact/
-- English homepage: https://www.dvije-zarulje.hr/en/
+- Homepage: https://eko-ciscenje.com/
+- Steam cleaning: https://eko-ciscenje.com/services/steam-cleaning
+- Other services: https://eko-ciscenje.com/services/other
+- Contact and location: https://eko-ciscenje.com/contact/
+- English homepage: https://eko-ciscenje.com/en/
 
 Contact:
-- Phone: +385 95 199 9754
-- Address map: https://maps.app.goo.gl/UwGsoqPBcp99dLc68
+- Phone: +385 91 447 8191
+- Address map: https://maps.app.goo.gl/KLVFDZR2ecABTBmY8
