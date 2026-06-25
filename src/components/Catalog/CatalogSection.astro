@@ -16,7 +16,7 @@ interface CatalogCategory {
 interface OfferingItem {
 	id: string;
 	categoryId: string;
-	page?: "commercial" | "residential";
+	page?: Array<"commercial" | "residential">;
 	name: LocalizedText;
 	description: LocalizedText;
 	price: number;
@@ -49,10 +49,17 @@ const priceFormatter = new Intl.NumberFormat(locale === "hr" ? "hr-HR" : "en-US"
 	currency,
 });
 
+const pageMatches = (
+	itemPage: OfferingItem["page"],
+	currentPage: "commercial" | "residential",
+): boolean => Array.isArray(itemPage) && itemPage.includes(currentPage);
+
 const selectedCategories = categories.filter(
 	(category) =>
 		categoryIds.includes(category.id) &&
-		items.some((item) => item.categoryId === category.id && item.page === page),
+		items.some(
+			(item) => category.id === item.categoryId && pageMatches(item.page, page),
+		),
 );
 
 const unavailableLabel = locale === "hr" ? "Trenutno nedostupno" : "Currently unavailable";
@@ -72,9 +79,13 @@ const updatedLabel = locale === "hr" ? "Ažurirano" : "Updated";
 		<div class="catalog-categories">
 			{
 				selectedCategories.map((category) => {
-					const categoryItems = items.filter(
-						(item) => item.categoryId === category.id && item.page === page,
-					);
+					const categoryItems = items
+						.filter((item) => category.id === item.categoryId && pageMatches(item.page, page))
+						.sort((a, b) => {
+							const aIncluded = Boolean(a.included);
+							const bIncluded = Boolean(b.included);
+							return Number(aIncluded) - Number(bIncluded);
+						});
 
 					return (
 						<section class="catalog-category" aria-labelledby={`catalog-${category.id}`}>

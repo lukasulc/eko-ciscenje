@@ -21,7 +21,7 @@ export interface AstroOfferingsCategory {
 export interface AstroOfferingItem {
   id: string;
   categoryId: string;
-  page?: OfferingsPage;
+  page?: OfferingsPage[];
   name: LocalizedText;
   description: LocalizedText;
   price: number;
@@ -243,6 +243,13 @@ function parseBoolean(value: string | undefined): boolean {
   );
 }
 
+function isOfferingsPageArray(value: unknown): value is OfferingsPage[] {
+  return (
+    Array.isArray(value) &&
+    value.every((item) => typeof item === "string" && isOfferingsPage(item))
+  );
+}
+
 function parseBadges(value: string | undefined): string[] {
   if (!value) {
     return [];
@@ -285,7 +292,8 @@ export function getFallbackOfferingsData(): AstroOfferingsData {
         description: fallbackSource.description ?? { hr: "", en: "" },
         badges: fallbackSource.badges ?? { hr: [], en: [] },
         available: fallbackSource.available ?? true,
-        ...(isOfferingsPage(fallbackSource.page)
+        ...(isOfferingsPage(fallbackSource.page) ||
+        isOfferingsPageArray(fallbackSource.page)
           ? { page: fallbackSource.page }
           : {}),
         price: fallbackSource.price ?? 0,
@@ -377,7 +385,7 @@ async function loadAstroOfferingsData(): Promise<AstroOfferingsData> {
           en: parseBadges(item.badges),
         },
         available: true,
-        ...(isOfferingsPage(item.page) ? { page: item.page } : {}),
+        ...(isOfferingsPageArray(item.page) ? { page: item.page } : {}),
         price: item.price,
         included: item.included ?? false,
       };

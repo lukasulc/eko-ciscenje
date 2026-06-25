@@ -29,7 +29,7 @@
     {
       "id": "basic-apartment-clean",
       "categoryId": "Included",
-      "page": "residential",
+      "page": ["residential"],
       "name": {
         "hr": "Osnovno čišćenje stana",
         "en": "Basic apartment clean"
@@ -49,7 +49,7 @@
     {
       "id": "kitchen-cleaning",
       "categoryId": "Included",
-      "page": "residential",
+      "page": ["residential", "commercial"],
       "name": {
         "hr": "Čišćenje kuhinje",
         "en": "Kitchen cleaning"
@@ -69,7 +69,7 @@
     {
       "id": "bathroom-cleaning",
       "categoryId": "Included",
-      "page": "residential",
+      "page": ["residential", "commercial"],
       "name": {
         "hr": "Čišćenje kupaonice",
         "en": "Bathroom cleaning"
@@ -89,7 +89,7 @@
     {
       "id": "office-deep-clean",
       "categoryId": "Included",
-      "page": "commercial",
+      "page": ["commercial"],
       "name": {
         "hr": "Dubinsko čišćenje ureda",
         "en": "Office deep clean"
@@ -109,7 +109,7 @@
     {
       "id": "garage-cleaning",
       "categoryId": "Optional",
-      "page": "residential",
+      "page": ["residential"],
       "name": {
         "hr": "Čišćenje garaže",
         "en": "Garage cleaning"
@@ -129,7 +129,7 @@
     {
       "id": "car-interior-cleaning",
       "categoryId": "Optional",
-      "page": "residential",
+      "page": ["residential"],
       "name": {
         "hr": "Čišćenje unutrašnjosti automobila",
         "en": "Car interior cleaning"
@@ -149,7 +149,7 @@
     {
       "id": "after-hours-office-cleaning",
       "categoryId": "Optional",
-      "page": "commercial",
+      "page": ["commercial"],
       "name": {
         "hr": "Nakon radnog vremena",
         "en": "After-hours cleaning"
