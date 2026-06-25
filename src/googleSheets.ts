@@ -25,6 +25,7 @@ export interface AstroOfferingItem {
   name: LocalizedText;
   description: LocalizedText;
   price: number;
+  included?: boolean;
   badges: {
     hr: string[];
     en: string[];
@@ -188,6 +189,13 @@ function rowsToOfferings(rows: string[][]): unknown[] {
     opis: findHeaderIndex(headers, "opis"),
     znacke: findHeaderIndex(headers, "znacke"),
     page: findHeaderIndex(headers, "page"),
+    included:
+      findHeaderIndex(headers, "included") ??
+      findHeaderIndex(headers, "includedinprice") ??
+      findHeaderIndex(headers, "includedintheprice") ??
+      findHeaderIndex(headers, "includedprice") ??
+      findHeaderIndex(headers, "isincluded") ??
+      findHeaderIndex(headers, "free"),
   };
   const missingFields = Object.entries(requiredFieldIndex)
     .filter(([, index]) => index === -1)
@@ -210,6 +218,9 @@ function rowsToOfferings(rows: string[][]): unknown[] {
       opis: readOptionalCell(row, optionalFieldIndex.opis),
       znacke: readOptionalCell(row, optionalFieldIndex.znacke),
       page: readOptionalCell(row, optionalFieldIndex.page),
+      included: parseBoolean(
+        readOptionalCell(row, optionalFieldIndex.included),
+      ),
     }));
 }
 
@@ -220,6 +231,16 @@ function slugify(value: string): string {
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
+}
+
+function parseBoolean(value: string | undefined): boolean {
+  if (!value) {
+    return false;
+  }
+
+  return ["1", "true", "yes", "y", "da", "on"].includes(
+    value.trim().toLowerCase(),
+  );
 }
 
 function parseBadges(value: string | undefined): string[] {
@@ -268,6 +289,7 @@ export function getFallbackOfferingsData(): AstroOfferingsData {
           ? { page: fallbackSource.page }
           : {}),
         price: fallbackSource.price ?? 0,
+        included: fallbackSource.included ?? false,
         ...(typeof fallbackSource.featured === "boolean"
           ? { featured: fallbackSource.featured }
           : {}),
@@ -357,6 +379,7 @@ async function loadAstroOfferingsData(): Promise<AstroOfferingsData> {
         available: true,
         ...(isOfferingsPage(item.page) ? { page: item.page } : {}),
         price: item.price,
+        included: item.included ?? false,
       };
 
       return sheetItem;

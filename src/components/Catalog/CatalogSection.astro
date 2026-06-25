@@ -19,7 +19,8 @@ interface OfferingItem {
 	page?: "commercial" | "residential";
 	name: LocalizedText;
 	description: LocalizedText;
-	price?: number;
+	price: number;
+	included?: boolean;
 	badges: Record<Locale, string[]>;
 	available: boolean;
 	featured?: boolean;
@@ -100,7 +101,20 @@ const updatedLabel = locale === "hr" ? "Ažurirano" : "Updated";
 												</div>
 											)}
 										</div>
-										{item.price && <strong class="price">{priceFormatter.format(item.price)}</strong>}
+										{(item.price > 0 || item.included) && (
+											<strong class:list={["price", { "price-included": item.included }]}>
+												{item.included ? (
+													<>
+														{item.price > 0 && (
+															<span class="price-original">{priceFormatter.format(item.price)}</span>
+														)}
+														<span class="price-zero">{priceFormatter.format(0)}</span>
+													</>
+												) : (
+													priceFormatter.format(item.price)
+												)}
+											</strong>
+										)}
 									</li>
 								))}
 							</ul>
@@ -246,6 +260,28 @@ const updatedLabel = locale === "hr" ? "Ažurirano" : "Updated";
 		line-height: 1.1;
 		color: var(--headerColor);
 		white-space: nowrap;
+	}
+
+	.price-included {
+		display: inline-flex;
+		flex-wrap: wrap;
+		gap: 0.55rem;
+		align-items: baseline;
+	}
+
+	.price-original,
+	.price-zero {
+		font-size: clamp(1rem, 2vw, 1.25rem);
+	}
+
+	.price-original {
+		text-decoration: line-through;
+		opacity: 0.8;
+	}
+
+	.price-zero {
+		font-weight: 700;
+		color: var(--primary);
 	}
 
 	@media only screen and (max-width: 48rem) {

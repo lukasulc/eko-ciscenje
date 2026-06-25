@@ -43,7 +43,48 @@
         "hr": ["Popularno"],
         "en": ["Popular"]
       },
-      "available": true
+      "available": true,
+      "included": false
+    },
+    {
+      "id": "kitchen-cleaning",
+      "categoryId": "Included",
+      "page": "residential",
+      "name": {
+        "hr": "Čišćenje kuhinje",
+        "en": "Kitchen cleaning"
+      },
+      "description": {
+        "hr": "Čišćenje kuhinje s naglaskom na higijenu.",
+        "en": "Kitchen cleaning with a focus on hygiene."
+      },
+      "price": 25.0,
+      "badges": {
+        "hr": ["Popularno"],
+        "en": ["Popular"]
+      },
+      "available": true,
+      "included": true
+    },
+    {
+      "id": "bathroom-cleaning",
+      "categoryId": "Included",
+      "page": "residential",
+      "name": {
+        "hr": "Čišćenje kupaonice",
+        "en": "Bathroom cleaning"
+      },
+      "description": {
+        "hr": "Čišćenje kupaonice s naglaskom na higijenu.",
+        "en": "Bathroom cleaning with a focus on hygiene."
+      },
+      "price": 20.0,
+      "badges": {
+        "hr": ["Popularno"],
+        "en": ["Popular"]
+      },
+      "available": true,
+      "included": true
     },
     {
       "id": "office-deep-clean",
@@ -62,7 +103,8 @@
         "hr": ["Profesionalno"],
         "en": ["Professional"]
       },
-      "available": true
+      "available": true,
+      "included": false
     },
     {
       "id": "garage-cleaning",
@@ -81,7 +123,8 @@
         "hr": ["Dodaci"],
         "en": ["Add-on"]
       },
-      "available": true
+      "available": true,
+      "included": false
     },
     {
       "id": "car-interior-cleaning",
@@ -100,7 +143,8 @@
         "hr": ["Dodaci"],
         "en": ["Add-on"]
       },
-      "available": true
+      "available": true,
+      "included": false
     },
     {
       "id": "after-hours-office-cleaning",
@@ -119,7 +163,8 @@
         "hr": ["Dodaci"],
         "en": ["Add-on"]
       },
-      "available": true
+      "available": true,
+      "included": false
     }
   ]
 }
