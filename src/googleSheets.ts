@@ -24,8 +24,7 @@ export interface AstroOfferingItem {
   page?: OfferingsPage;
   name: LocalizedText;
   description: LocalizedText;
-  // keep price as string to support flexible pricing models
-  price?: string;
+  price: number;
   badges: {
     hr: string[];
     en: string[];
@@ -204,7 +203,7 @@ function rowsToOfferings(rows: string[][]): unknown[] {
     .filter((row) => row.some((cell) => cell.trim() !== ""))
     .map((row) => ({
       name: row[requiredFieldIndex.name] ?? "",
-      price: row[requiredFieldIndex.price] ?? "",
+      price: parseFloat(row[requiredFieldIndex.price] ?? "0") || 0,
       category: row[requiredFieldIndex.category] ?? "",
       description: readOptionalCell(row, optionalFieldIndex.description),
       badges: readOptionalCell(row, optionalFieldIndex.badges),
@@ -268,9 +267,7 @@ export function getFallbackOfferingsData(): AstroOfferingsData {
         ...(isOfferingsPage(fallbackSource.page)
           ? { page: fallbackSource.page }
           : {}),
-        ...(typeof fallbackSource.price === "string"
-          ? { price: fallbackSource.price }
-          : {}),
+        price: fallbackSource.price ?? 0,
         ...(typeof fallbackSource.featured === "boolean"
           ? { featured: fallbackSource.featured }
           : {}),
@@ -359,7 +356,7 @@ async function loadAstroOfferingsData(): Promise<AstroOfferingsData> {
         },
         available: true,
         ...(isOfferingsPage(item.page) ? { page: item.page } : {}),
-        ...(typeof item.price === "string" ? { price: item.price } : {}),
+        price: item.price,
       };
 
       return sheetItem;

@@ -38,7 +38,7 @@
         "hr": "Kompletno čišćenje stana s naglaskom na dnevne prostorije.",
         "en": "Complete apartment cleaning focused on daily living spaces."
       },
-      "price": "70.00",
+      "price": 70.0,
       "badges": {
         "hr": ["Popularno"],
         "en": ["Popular"]
@@ -57,7 +57,7 @@
         "hr": "Dubinsko čišćenje ureda prilagođeno profesionalnim prostorima.",
         "en": "Deep cleaning for offices designed for professional environments."
       },
-      "price": "150.00",
+      "price": 150.0,
       "badges": {
         "hr": ["Profesionalno"],
         "en": ["Professional"]
@@ -76,7 +76,7 @@
         "hr": "Čišćenje i organizacija garažnog prostora.",
         "en": "Cleaning and organizing garage space."
       },
-      "price": "30.00",
+      "price": 30.0,
       "badges": {
         "hr": ["Dodaci"],
         "en": ["Add-on"]
@@ -95,7 +95,7 @@
         "hr": "Dubinsko čišćenje sjedala, poda i unutarnjih površina vozila.",
         "en": "Deep cleaning of seats, floor, and interior surfaces of your car."
       },
-      "price": "40.00",
+      "price": 40.0,
       "badges": {
         "hr": ["Dodaci"],
         "en": ["Add-on"]
@@ -114,7 +114,7 @@
         "hr": "Dubinsko čišćenje ureda izvan radnog vremena.",
         "en": "Deep cleaning of the office outside business hours."
       },
-      "price": "55.00",
+      "price": 55.0,
       "badges": {
         "hr": ["Dodaci"],
         "en": ["Add-on"]

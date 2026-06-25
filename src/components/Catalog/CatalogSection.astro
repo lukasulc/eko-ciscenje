@@ -19,7 +19,7 @@ interface OfferingItem {
 	page?: "commercial" | "residential";
 	name: LocalizedText;
 	description: LocalizedText;
-	price?: string;
+	price?: number;
 	badges: Record<Locale, string[]>;
 	available: boolean;
 	featured?: boolean;
@@ -36,11 +36,16 @@ interface Props {
 const { locale, page, categoryIds, offeringsData, intro } = Astro.props as Props;
 const categories = offeringsData.categories as CatalogCategory[];
 const items = offeringsData.items as OfferingItem[];
+const currency = offeringsData.currency;
 const updatedAt = new Date(`${offeringsData.updatedAt}T12:00:00`);
 const dateFormatter = new Intl.DateTimeFormat(locale === "hr" ? "hr-HR" : "en-US", {
 	day: "numeric",
 	month: "long",
 	year: "numeric",
+});
+const priceFormatter = new Intl.NumberFormat(locale === "hr" ? "hr-HR" : "en-US", {
+	style: "currency",
+	currency,
 });
 
 const selectedCategories = categories.filter(
@@ -95,7 +100,7 @@ const updatedLabel = locale === "hr" ? "Ažurirano" : "Updated";
 												</div>
 											)}
 										</div>
-										{item.price && <strong class="price">{item.price}</strong>}
+										{item.price && <strong class="price">{priceFormatter.format(item.price)}</strong>}
 									</li>
 								))}
 							</ul>
