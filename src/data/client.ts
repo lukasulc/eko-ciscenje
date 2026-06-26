@@ -2,7 +2,7 @@ export const SITE = {
   title: "Eko Čišćenje",
   tagline: "Profesionalno čišćenje parom u Zagrebu",
   description:
-    "Eko Čišćenje nudi profesionalno parno čišćenje u Zagrebu za domove, urede, tepihe i tapecirani namještaj, s ekološkim pristupom bez jakih kemikalija.",
+    "Eko Čišćenje nudi profesionalno parno čišćenje u Zagrebu za domove, urede, tepihe i tapecirani namještaj, s ekološkim pristupom u potpunosti bez kemikalija.",
   url: "https://eko-ciscenje.com",
   author: "Eko Čišćenje",
   locale: "hr-HR",
@@ -15,12 +15,12 @@ export const BUSINESS = {
   phoneFormatted: "+385 91 447 8191",
   logo: "/favicon.svg",
   address: {
-    lineOne: "Baburičina ulica 17",
-    lineTwo: "",
+    lineOne: "Tišinska ulica III. odvojak",
+    lineTwo: "Jakuševac",
     city: "Zagreb",
     state: "",
     zip: "10020",
-    mapLink: "https://maps.app.goo.gl/KLVFDZR2ecABTBmY8",
+    mapLink: "https://maps.app.goo.gl/xX5ZVQLiH57prSWy8",
   },
   socials: {
     facebook: "https://www.facebook.com/",
